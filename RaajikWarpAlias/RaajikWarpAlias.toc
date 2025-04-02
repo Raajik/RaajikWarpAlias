@@ -1,0 +1,7 @@
+## Interface: 30300
+## Title: RaajikWarpAlias
+## Notes: Use aliases and partial matches to warp faster!
+## Author: Raajik
+## Version: 1.0
+
+RaajikWarpAlias.lua
