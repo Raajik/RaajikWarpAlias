@@ -5,7 +5,7 @@ frame:RegisterEvent("ADDON_LOADED")
 -- Define Available Locations
 local teleportLocations = {
     alterac = "Alterac Mountains",
-    arathi = "Arathi Highlands",
+    ah = "Arathi Highlands",
     ash = "Ashenvale",
     az = "Azshara",
     ai = "Azuremyst Isle",
@@ -18,24 +18,24 @@ local teleportLocations = {
     bs = "Burning Steppes",
     cf = "Crystalsong Forest",
     dal = "Dalaran",
-    darkshore = "Darkshore",
+    ds = "Darkshore",
     darn = "Darnassus",
-    dwp = "Deadwind Pass",
+    dp = "Deadwind Pass",
     desolace = "Desolace",
     db = "Dragonblight",
     dm = "Dun Morogh",
     durotar = "Durotar",
-    duskwood = "Duskwood",
+    ["dw"] = "Duskwood",
     dwm = "Dustwallow Marsh",
     epl = "Eastern Plaguelands",
-    elwynn = "Elwynn Forest",
-    eversong = "Eversong Woods",
-    felwood = "Felwood",
+    ef = "Elwynn Forest",
+    ew = "Eversong Woods",
+    fw = "Felwood",
     feralas = "Feralas",
-    ghostlands = "Ghostlands",
-    gh = "Grizzly Hills",
+    ["gl"] = "Ghostlands",
+    ["gh"] = "Grizzly Hills",
     hfp = "Hellfire Peninsula",
-    hillsbrad = "Hillsbrad Foothills",
+    hb = "Hillsbrad Foothills",
     hf = "Howling Fjord",
     icecrown = "Icecrown",
     ["if"] = "Ironforge",
@@ -46,15 +46,15 @@ local teleportLocations = {
     nagrand = "Nagrand",
     ns = "Netherstorm",
     org = "Orgrimmar",
-    redridge = "Redridge Mountains",
+    rrm = "Redridge Mountains",
     sg = "Searing Gorge",
     smv = "Shadowmoon Valley",
     shat = "Shattrath City",
     shol = "Sholazar Basin",
     silithus = "Silithus",
     smc = "Silvermoon City",
-    silverpine = "Silverpine Forest",
-    stonetalon = "Stonetalon Mountains",
+    sf = "Silverpine Forest",
+    stm = "Stonetalon Mountains",
     sw = "Stormwind City",
     stv = "Stranglethorn Vale",
     sos = "Swamp of Sorrows",
@@ -64,17 +64,17 @@ local teleportLocations = {
     barrens = "The Barrens",
     exodar = "The Exodar",
     hinterlands = "The Hinterlands",
-    stormpeaks = "The Storm Peaks",
+    ["sp"] = "The Storm Peaks",
     ["1k"] = "Thousand Needles",
     tb = "Thunder Bluff",
-    tirisfal = "Tirisfal Glades",
+    tg = "Tirisfal Glades",
     ungoro = "Un'Goro Crater",
     uc = "Undercity",
     wpl = "Western Plaguelands",
-    westfall = "Westfall",
+    wf = "Westfall",
     wetlands = "Wetlands",
     wg = "Wintergrasp",
-    winterspring = "Winterspring",
+    ws = "Winterspring",
     zang = "Zangarmarsh",
     zuldrak = "Zul'Drak"
 }
@@ -82,7 +82,7 @@ local teleportLocations = {
 -- Helper Function to Match User Input
 local function findLocation(input)
     for alias, location in pairs(teleportLocations) do
-        if #input >= 3 and #input <= 12 and 
+        if #input >= 2 and #input <= 12 and 
            (alias:sub(1, #input) == input or location:lower():sub(1, #input) == input:lower()) then
             return location
         end
@@ -97,7 +97,7 @@ local function handleWarpCommand(input)
         print("Matched input '" .. input .. "' to location: " .. location .. ". Teleporting now!")
         CustomTeleportName(location)
     else
-        print("Location not found. Please try again with 3-12 letters.")
+        print("Location not found. Please try again with 2-12 letters.")
     end
 end
 
