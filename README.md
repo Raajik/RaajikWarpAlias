@@ -11,3 +11,11 @@
 
  ![image](https://github.com/user-attachments/assets/39be218e-9b1b-4ac7-8984-40cc5446fd3f)
 
+# Warp Acquisition
+Warps can be acquired randomly from Usuri Brightcoin's Mystery Boxes in the Dalaran Sewers. You *must* have at least one learned in order to utilize this addon.
+
+![image](https://github.com/user-attachments/assets/ea644d22-2f03-40b2-bb5b-ebaf992bc9f8)
+
+![image](https://github.com/user-attachments/assets/96ac15d6-ee8e-4333-b5fc-62ef752a1a18)
+
+
